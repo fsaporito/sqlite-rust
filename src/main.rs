@@ -4,8 +4,8 @@ fn print_help() {
     println!("#### SQLITE Rust Clone ###\n");
     println!("Helper \n");
     println!("Available Commands:\n");
-    println!("\t help, h => this prompt\n");
-    println!("\t quit, q => quit program prompt\n");
+    println!("\t .help, .h => this prompt\n");
+    println!("\t .quit, .q => quit program prompt\n");
 }
 
 fn print_prompt() {
@@ -31,11 +31,11 @@ fn main() {
         println!("Received command is: {}\n", input_command);
 
         match input_command {
-            "quit" | "q" => {
+            ".quit" | ".q" => {
                     println!("Closing down application. Bye\n");
                     break;
                 },
-            "help" | "h" => {
+            ".help" | ".h" => {
                 print_help();
                 continue;
                 },
